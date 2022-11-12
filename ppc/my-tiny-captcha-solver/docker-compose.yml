@@ -1,0 +1,30 @@
+version: '3.9'
+
+networks:
+  app-tier:
+    driver: bridge
+    internal: true
+
+services:
+  Etcd:
+    restart: "always"
+    image: 'bitnami/etcd:latest'
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd:2379
+    ports:
+      - 2379:2379
+      - 2380:2380
+    networks:
+      - app-tier
+  task_mt_tiny_captcha_solver:
+    build: .
+    restart: "always"
+    networks:
+      - app-tier
+      - default
+    environment:
+      - TASK_FLAG=CTF{9Z16acE129_0h_my_l1ttl3_OCR_dXbpP9d1Q37}
+    ports:
+      - 5577:8080
+    command: /usr/local/bin/app

@@ -1,0 +1,10 @@
+version: '3.9'
+
+
+services:
+  task_pin_guesser:
+    build: .
+    restart: "always"
+    ports:
+      - 5578:6666
+    command: /usr/local/bin/app

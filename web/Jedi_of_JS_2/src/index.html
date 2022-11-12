@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!DOCTYPE html>
+    <html lang="en">
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Super private admin login page</title>
+    </head>
+<body class="dark site">
+            <form class="form" onsubmit="tryPassword(); return false;">
+                What is your password?
+                <input type="text" id="ctfflag">
+                <input type="submit" value="Submit">
+            </form>
+                <style>
+                    html {
+			width: 100%;
+			height: 100%;
+                    }
+                    body {
+                        position: relative;
+                        margin: 0;
+                        width: 100%;
+                        height: 100%;
+                        color: whitesmoke;
+                    }
+                    .form {
+                        position: absolute;
+		        top: 50%;
+		        left: 50%;
+		        margin-top: 0px;
+		        margin-left: -10%;
+		        width: 200re;
+		        height: 200re;
+                        font-size: 20px;
+                        color: black;
+                    }
+                </style>
+                <script>
+                    function tryPassword() {
+                        var flag = document.getElementById('ctfflag').value;
+
+                        if (flag.length != 36) {
+                            alert("WRONG");
+                            return;
+                        }
+                        if (flag.substr(0, 4) != "CTF{") {
+                            alert("WRONG");
+                            return;
+                        }
+
+            			if (flag.substr(4, 6) != "_a_m@I".split("").reverse().join("")) {
+                            alert("WRONG");
+                            return;
+                        }
+
+                        if (flag.substr(10, 7) != "r3@lly_") {
+                            alert("WRONG");
+                            return;
+                        }
+
+                        if (flag.substr(17, 7) != flag.substr(10, 7)) {
+                            alert("WRONG");
+                            return;
+                        }
+
+                        if (flag.substr(24, 4) != ['c', 'l'].join('00')) {
+                            alert("WRONG");
+                            return;
+                        }
+
+                        if (flag.substr(28, 7) != atob('X2hAY2szcg==')) {
+                            alert("WRONG");
+                            return;
+                        }
+            			if (flag[35] != String.fromCharCode(0x7D)) {
+            			    alert("WRONG")
+            			    return;
+			}
+                        alert("PASSWORD IS CORRECT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1");
+                    }
+                </script>
+</body>
+</html>

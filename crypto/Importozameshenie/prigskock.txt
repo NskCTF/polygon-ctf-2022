@@ -1,0 +1,2 @@
+cipher_text: "94715e0382f4f34102e7b00eb0742a7e"
+key: KuZn3ch1k_1s_4_c0l3St_Th1nG_3v3r

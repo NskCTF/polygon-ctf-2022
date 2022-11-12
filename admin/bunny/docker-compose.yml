@@ -1,0 +1,50 @@
+version: "3.9"
+services:
+  mach1:
+    restart: always
+    build: .
+    ports:
+      - 15555:8044
+    networks:
+      - int
+      - ext1
+    environment:
+    - LPORT=8044
+    - MACHINE_ID=1
+    command: python3 /app/server.py
+
+  mach2:
+    restart: always
+    build: .
+    networks:
+      - int
+      - int2
+      - ext2
+    environment:
+    - LPORT=1313
+    - MACHINE_ID=2
+    command: python3 /app/server.py
+
+  mach3:
+    restart: always
+    build: 
+      context: .
+      dockerfile: ./final/Dockerfile
+    networks:
+      - int2
+      - ext3
+    environment:
+    - LPORT=9955
+    - MACHINE_ID=3
+    command: python3 /app/server.py
+networks:
+  int:
+    internal: true
+  int2:
+    internal: true
+  ext1:
+    internal: false
+  ext2:
+    internal: false
+  ext3:
+    internal: false

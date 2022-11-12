@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<script>
+function showFlag() {
+	var element = document.getElementById('flagBtn');
+	if (element.outerHTML !== '<input id="flagBtn" type="button" disabled="" value="Gimme flag" onclick="showFlag();">') {
+		alert("Element flagBtn corrupted (wrong html: " + element.outerHTML + "), should be: " + '<input id="flagBtn" type="button" disabled="" value="Gimme flag" onclick="showFlag();">');
+	} else {
+		alert("CTF{js_m@st3r_abracadabra123}");
+	}
+}
+</script>
+<html>
+    <head>
+        <title>ctf enjoyer</title>
+    </head>
+    <body>
+        <input id="flagBtn" type="button" disabled="" value="Gimme flag" onclick="showFlag();">
+    </body>
+</html>

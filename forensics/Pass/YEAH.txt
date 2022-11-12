@@ -1,0 +1,7 @@
+https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/xato-net-10-million-passwords-1000000.txt
+Flag is CTF{PasswordOne_PasswordTwo}
+
+Password One = Vasyliy's password
+Password Two = Kirill's password
+
+(for example CTF{superman_123321})

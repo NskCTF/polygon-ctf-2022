@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="module">
+import { flag } from "./build/release.js";
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+const random = getRandomInt(999);
+if (random === 777) document.body.innerText = "Really out of luck";
+else document.body.innerText = "You roll this number: " + random.toString() + "; result:" + flag(random);
+</script>
+</head>
+<body></body>
+</html>

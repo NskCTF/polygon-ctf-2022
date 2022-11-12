@@ -1,0 +1,7 @@
+version: '2'
+services:
+  browser_task:
+    build: .
+    restart: always
+    ports:
+     - "8083:8083"

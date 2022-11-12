@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+  mach1:
+    restart: always
+    build: .
+    ports:
+      - 15556:8044
+    networks:
+      - int
+      - ext
+    command: runuser -l limiteduser -c 'export LPORT=8044 && export MACHINE_ID=1 && python3 /app/server.py'
+
+  mach2:
+    restart: always
+    build: .
+    networks:
+      - int
+      - int2
+    command: runuser -l limiteduser -c 'export LPORT=57341 && export MACHINE_ID=2 && python3 /app/server.py'
+
+  mach3:
+    restart: always
+    build: 
+      context: .
+      dockerfile: ./final/Dockerfile
+    networks:
+      - int2
+    environment:
+    - LPORT=48239
+    - MACHINE_ID=3
+    command: python3 /app/server.py
+networks:
+  int:
+    internal: true
+  int2:
+    internal: true
+  ext:
+    internal: false

@@ -1,0 +1,7 @@
+version: '2'
+services:
+  all_rights_task:
+    build: .
+    restart: always
+    ports:
+     - "4444:22"
